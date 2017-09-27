@@ -211,12 +211,12 @@ drilldownchart <- function(input, output, session, daterange_period1, daterange_
               } else if (e.point.name == 'opera') {
                 image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/opera.png';
               }
-              $('#piechart').css('background', 'url(' + image + ') no-repeat 50% 50%').css('background-size', '15%');
+              $('#drilldownchart_ui-piechart').css('background', 'url(' + image + ') no-repeat 50% 50%').css('background-size', '15%');
              }"
           ),
           drillup = JS(
             "function(e) { 
-              $('#piechart').css('background-image', 'none'); 
+              $('#drilldownchart_ui-piechart').css('background-image', 'none'); 
              }"
           )
         )
