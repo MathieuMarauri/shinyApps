@@ -1,5 +1,5 @@
 
-# Background image in body and in drilldown chart.
+# Background image in body, header (with a link) and in drilldown chart.
 
 # The images for the drilldown chart should be all the same size (http://resizeimage.net/) and preferably hosted on github (and used with raw path).
 
@@ -16,21 +16,13 @@ library('highcharter')
 ui <- dashboardPage(
   dashboardHeader(
     title = tags$a(
-      href='https://fr.wikipedia.org/wiki/Saison_2015-2016_du_FC_Barcelone',
+      href='https://www.netmarketshare.com/browser-market-share.aspx?qprid=2&qpcustomd=0',
       tags$img(
-        src = 'https://vignette2.wikia.nocookie.net/logopedia/images/0/0e/Barcelona.png/revision/latest?cb=20161111145150', 
+        src = 'https://github.com/MathieuMarauri/shinyApps/raw/master/data/browserLogos.png', 
         height = "120px"
       )
     ),
-    titleWidth = 324,
-    tags$li(
-      a(
-        "Saison 2015-2016",
-        style = "font-size: 36px; padding-top:44px; padding-right:5% ;"
-      ),
-      align = 'center',
-      class = "dropdown"
-    )
+    titleWidth = 324
   ),
   dashboardSidebar(),
   dashboardBody(
@@ -144,15 +136,15 @@ server <- function(input, output){
             "function(e){
                 var image = 'none';
                 if (e.point.name == 'chrome') {
-                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/chrome.png';
+                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/chrome.png';
                 } else if (e.point.name == 'msie') {
-                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/ie.png';
+                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/ie.png';
                 } else if (e.point.name == 'firefox') {
-                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/firefox.png';
+                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/firefox.png';
                 } else if (e.point.name == 'safari') {
-                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/safari.png';
+                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/safari.png';
                 } else if (e.point.name == 'opera') {
-                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/opera.png';
+                  image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/opera.png';
                 }
                 $('#plot').css('background', 'url(' + image + ') no-repeat 50% 50%').css('background-size', '15%');
              }"
