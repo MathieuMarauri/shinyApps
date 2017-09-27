@@ -104,7 +104,7 @@
   border-color: var(--custom-box-border-color);
   border-width: 1px;
   background-color: var(--custom-box-color);
-  padding: 10px;
+  padding: 5px 10px 10px 10px;
 }
 
 .custom-box-header{
