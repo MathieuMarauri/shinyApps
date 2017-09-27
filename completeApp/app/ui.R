@@ -1,8 +1,19 @@
 
-
 # Header ------------------------------------------------------------------
 
-header <- dashboardHeader(title = "Dashboard Shiny")
+header <- dashboardHeader(
+  title = "Dashboard Shiny",
+  tags$li(
+    class = "dropdown",
+    tags$a(
+      href = "https://github.com/MathieuMarauri/shinyApps",  
+      tags$img(
+        height = "50px", 
+        alt = "Github", 
+        src = "https://github.com/MathieuMarauri/shinyApps/raw/master/data/githubLogo.png")
+    )
+  )
+)
 
 
 # Sidebar -----------------------------------------------------------------

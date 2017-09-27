@@ -18,6 +18,11 @@
   background-color: var(--header-color);
 }
 
+/* header image */
+.navbar-nav>li>a {
+    padding: 0px;
+}
+
 /* Header left side */
 .skin-blue .main-header .logo {
   background-color: var(--header-color);
