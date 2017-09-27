@@ -6,7 +6,7 @@
 library(highcharter)
 library(data.table)
 
-browser <- readRDS('code/app/input/browser.rds')
+browser <- readRDS('completeApp/app/input/browser.rds')
 
 # level1
 level1 <- browser[, .(y = sum(data)), by = name]
@@ -51,15 +51,15 @@ highchart() %>%
         "function(e){
           var image = 'none';
           if (e.point.name == 'chrome') {
-            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/chrome.png';
+            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/chrome.png';
           } else if (e.point.name == 'msie') {
-            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/ie.png';
+            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/ie.png';
           } else if (e.point.name == 'firefox') {
-            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/firefox.png';
+            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/firefox.png';
           } else if (e.point.name == 'safari') {
-            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/safari.png';
+            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/safari.png';
           } else if (e.point.name == 'opera') {
-            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/opera.png';
+            image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/opera.png';
           }
           $('#browser_plot').css('background', 'url(' + image + ') no-repeat 50% 50%').css('background-size', '15%');
         }"
