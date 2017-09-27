@@ -93,7 +93,7 @@ drilldownchart <- function(input, output, session, daterange_period1, daterange_
     kpi1_period2 <- barchartData(data = barchart_data(), kpi = 'kpi1', daterange = daterange_period2(), stack = 'period2')
     kpi2_period2 <- barchartData(data = barchart_data(), kpi = 'kpi2', daterange = daterange_period2(), stack = 'period2')
     
-    max_xAxis <- max(length(kpi1_comparison$level1), length(kpi1_analysis$level1))
+    max_xAxis <- max(length(kpi1_period1$level1), length(kpi1_period2$level1))
     
     highchart() %>%
       hc_chart(
@@ -201,15 +201,15 @@ drilldownchart <- function(input, output, session, daterange_period1, daterange_
             "function(e){
               var image = 'none';
               if (e.point.name == 'chrome') {
-                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/chrome.png';
+                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/chrome.png';
               } else if (e.point.name == 'msie') {
-                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/ie.png';
+                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/ie.png';
               } else if (e.point.name == 'firefox') {
-                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/firefox.png';
+                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/firefox.png';
               } else if (e.point.name == 'safari') {
-                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/safari.png';
+                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/safari.png';
               } else if (e.point.name == 'opera') {
-                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/code/app/www/opera.png';
+                image = 'https://github.com/MathieuMarauri/shinyApps/raw/master/completeApp/app/www/opera.png';
               }
               $('#piechart').css('background', 'url(' + image + ') no-repeat 50% 50%').css('background-size', '15%');
              }"
