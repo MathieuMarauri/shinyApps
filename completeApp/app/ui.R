@@ -8,7 +8,7 @@ header <- dashboardHeader(
     tags$a(
       href = "https://github.com/MathieuMarauri/shinyApps",  
       tags$img(
-        height = "50px", 
+        height = "50px", # same as header height
         alt = "Github", 
         src = "https://github.com/MathieuMarauri/shinyApps/raw/master/data/githubLogo.png")
     )
@@ -19,7 +19,7 @@ header <- dashboardHeader(
 # Sidebar -----------------------------------------------------------------
 
 sidebar <- dashboardSidebar(
-  width = 243,
+  width = 230, # same as main-header logo width
   sidebarMenu(
     id = "sidebar_menu",
     menuItem(
